@@ -230,6 +230,9 @@ class Feed extends React.Component {
     if (prevState.messages.length !== this.state.messages.length) {
         this.scrollToBottom('smooth')
     }
+    if (!equal(this.props.currentUser, prevProps.currentUser)) {
+      this.socket.emit('nameChange', this.props.currentRoom)
+    }
   }
 }
 
