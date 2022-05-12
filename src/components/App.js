@@ -24,7 +24,7 @@ class App extends React.Component {
   login = (email, password) => {
     const credentials = { email: email, password: password } 
 
-    fetch('http://localhost:5000/sessions/new', {
+    fetch('http://polar-ravine-55573.herokuapp.com/sessions/new', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ class App extends React.Component {
   }
 
   signUp = (newUser) => {
-    fetch('http://localhost:5000/users/new', {
+    fetch('http://polar-ravine-55573.herokuapp.com/users/new', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
