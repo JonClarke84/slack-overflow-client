@@ -18,7 +18,7 @@ function EditProfile({ currentUser, toggleEditProfileModal, loginFunction, logou
     if (validateForm(updatedUser)) {
       toggleEditProfileModal()
   
-      fetch(`http://polar-ravine-55573.herokuapp.com/users/${id}`, {
+      fetch(`https://polar-ravine-55573.herokuapp.com/users/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
