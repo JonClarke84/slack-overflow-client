@@ -157,6 +157,7 @@ class Feed extends React.Component {
                 id='messageInput' 
                 className='bottom-bar-input' 
                 type="text" 
+                autoComplete='off'
                 placeholder="Enter message..." 
                 onChange={this.handleChange}
                 value={this.state.newMessageInput} />
