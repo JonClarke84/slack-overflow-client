@@ -149,63 +149,61 @@ class Feed extends React.Component {
    
     return (
       <div>
-      <div className='Feed' id="feed">
-        <div id="messages" className="messages">
-        {messageComponents}
-        </div>
-        <p className='text-transparent'>{this.props.currentRoom}</p>
-          <div className='bottom-bar'>
-              <input
-              id='messageInput' 
-              className='bottom-bar-input' 
-              type="text" 
-              placeholder="Enter message..." 
-              onChange={this.handleChange}
-              value={this.state.newMessageInput} />
+        <div className='Feed' id="feed">
+          {messageComponents}
+          <p className='text-transparent'>{this.props.currentRoom}</p>
+            <div className='bottom-bar'>
+                <input
+                id='messageInput' 
+                className='bottom-bar-input' 
+                type="text" 
+                placeholder="Enter message..." 
+                onChange={this.handleChange}
+                value={this.state.newMessageInput} />
 
-            <button
-              type="submit"
-              id="submit-message"
-              className='send-button' 
-              onClick={this.handleSubmit}>
-              <IoSend size="20" />
-            </button>
-            <div className='bottom-sub-bar'>
+              <button
+                type="submit"
+                id="submit-message"
+                className='send-button' 
+                onClick={this.handleSubmit}>
+                <IoSend size="20" />
+              </button>
+              <div className='bottom-sub-bar'>
 
+              
             
-          
-            <button
-              type="submit"
-              className='bottom-bar-icon group'>
-              <BsImage size="20" />
-              <span className="flex flex-row justify-center items-center
-                              absolute bottom-8 left-0
-                            bg-gray-600
-                              scale-0 group-hover:scale-100
-                              transition-all duration-300 origin-bottom-left ease-in-out
-                              rounded-md">
-                <ImageUpload currentUser={this.props.currentUser} getUrl={this.getUrl} />
-              </span>
-            </button>
+              <button
+                type="submit"
+                className='bottom-bar-icon group'>
+                <BsImage size="20" />
+                <span className="flex flex-row justify-center items-center
+                                absolute bottom-8 left-0
+                              bg-gray-600
+                                scale-0 group-hover:scale-100
+                                transition-all duration-300 origin-bottom-left ease-in-out
+                                rounded-md">
+                  <ImageUpload currentUser={this.props.currentUser} getUrl={this.getUrl} />
+                </span>
+              </button>
 
-            <button
-              type="file"
-              className='bottom-bar-icon'>
-              <AiOutlineFileGif size="20"/>
-            </button>
-            <button
-              type="submit"
-              className='bottom-bar-emoji'>
-              <BsFillEmojiDizzyFill size="20"/>
-            </button>
-            <button
-              type="submit"
-              className='bottom-bar-icon'>
-              <BsCodeSlash size="20" />
-            </button>
-            </div>
-          </div>       
-      </div>
+              <button
+                type="file"
+                className='bottom-bar-icon'>
+                <AiOutlineFileGif size="20"/>
+              </button>
+              <button
+                type="submit"
+                className='bottom-bar-emoji'>
+                <BsFillEmojiDizzyFill size="20"/>
+              </button>
+              <button
+                type="submit"
+                className='bottom-bar-icon'>
+                <BsCodeSlash size="20" />
+              </button>
+              </div>
+            </div>       
+        </div>
       </div>
       
     )
