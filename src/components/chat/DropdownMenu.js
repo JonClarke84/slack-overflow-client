@@ -1,4 +1,4 @@
-function DropdownMenu({ currentUser, logoutFunction, animationClass, toggleEditProfileModal }) {
+function DropdownMenu({ currentUser, logoutFunction, animationClass, toggleEditProfileModal, toggleAboutYouModal }) {
 
   const { firstName, lastName, email, icon, displayName } = currentUser
 
@@ -14,6 +14,9 @@ function DropdownMenu({ currentUser, logoutFunction, animationClass, toggleEditP
            </li>
            <li className='bannerProfile'>
              {<button name="edit" onClick={toggleEditProfileModal}>Edit Profile</button>}
+           </li>
+           <li className="bannerProfile">
+             {<button name="about" onClick={toggleAboutYouModal}>About You</button>}
            </li>
            <li className='bannerProfile'>
              {<button name="logout" onClick={logoutFunction}>Logout</button>}
