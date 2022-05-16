@@ -57,7 +57,7 @@ function Banner({ currentUser, logoutFunction, loginFunction, currentRoom }) {
         exitBeforeEnter={true}
         onExitComplete={() => null}
         >
-      {showAboutYou && <AboutYou handleClose={toggleAboutYouModal}/>}
+      {showAboutYou && <AboutYou handleClose={toggleAboutYouModal} currentUser={currentUser}/>}
       </AnimatePresence>
     </div>
   )

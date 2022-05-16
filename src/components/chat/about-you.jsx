@@ -1,9 +1,9 @@
 import Backdrop from './backdrop'
 import { motion } from 'framer-motion'
 import { Player } from '@remotion/player'
-import { video } from '../../videos'
+import { AboutYouVideo } from '../video/AboutYouVideo'
 
-const AboutYou = ({ handleClose, text }) => {
+const AboutYou = ({ handleClose, text, currentUser }) => {
 
   const popIn = {
     hidden: { scale: 0, opacity: 0 },
@@ -28,13 +28,26 @@ const AboutYou = ({ handleClose, text }) => {
       animate="visible"
       exit="exit"
       >
+    <div>
       <Player
-        component={video}
+        component={AboutYouVideo}
+        durationInFrames={150}
+        compositionWidth={360}
+        compositionHeight={240}
+        fps={30}
+        autoPlay
+        loop
+        controls
+        muted
+        inputProps={{
+          muted: true,
+          currentUser: currentUser,
+        }}
       />
-
+    </div>
         <button className="text-center text-gray-400 hover:text-purple-600 transition duration-1000"
                 onClick={handleClose}
-                >
+        >
                   Close
         </button>
 
