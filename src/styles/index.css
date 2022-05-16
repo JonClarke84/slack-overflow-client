@@ -223,6 +223,19 @@
     align-items: center;
   }
 
+  .video {
+    @apply relative flex items-center justify-center
+    w-full h-full
+    bg-gray-800
+    overflow-hidden
+  }
+  .video-container {
+    @apply relative
+    w-full h-full
+    bg-gray-800
+    overflow-hidden
+  }
+
 }
 
  .messages {

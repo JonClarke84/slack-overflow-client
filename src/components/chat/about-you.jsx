@@ -1,5 +1,7 @@
 import Backdrop from './backdrop'
 import { motion } from 'framer-motion'
+import { Player } from '@remotion/player'
+import { video } from '../../videos'
 
 const AboutYou = ({ handleClose, text }) => {
 
@@ -26,7 +28,10 @@ const AboutYou = ({ handleClose, text }) => {
       animate="visible"
       exit="exit"
       >
-        Hello this is a modal About You
+      <Player
+        component={video}
+      />
+
         <button className="text-center text-gray-400 hover:text-purple-600 transition duration-1000"
                 onClick={handleClose}
                 >
