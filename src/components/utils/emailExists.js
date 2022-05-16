@@ -1,5 +1,5 @@
 export function emailExists(email) {
-  fetch(`https://polar-ravine-55573.herokuapp.com/users/email/check`, {
+  fetch(`http://localhost:5000/users/email/check`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

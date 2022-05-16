@@ -30,7 +30,7 @@ class Feed extends React.Component {
 
   getRoomMessages() {
     const that = this
-    const url = `https://polar-ravine-55573.herokuapp.com/messages/room/${this.props.currentRoom}`
+    const url = `http://localhost:5000/messages/room/${this.props.currentRoom}`
     fetch(url, {
       method: "GET",
     }
@@ -56,7 +56,7 @@ class Feed extends React.Component {
  }
 
   socketConnect() {
-    this.socket = io(`https://polar-ravine-55573.herokuapp.com`)
+    this.socket = io(`http://localhost:5000`)
     this.socket.on('handshake', (msg) => {
       console.log(msg)
     })
